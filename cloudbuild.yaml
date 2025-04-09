@@ -3,7 +3,7 @@ steps:
     args:
       - build
       - '-t'
-      - '$_AR_HOSTNAME/$_AR_PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA'
+      - '$_AR_HOSTNAME/$_AR_PROJECT_ID/$_SERVICE_NAME/$_SERVICE_NAME:$COMMIT_SHA'
       - .
   - name: gcr.io/cloud-builders/docker
     args:
@@ -15,7 +15,7 @@ steps:
       - deploy
       - $_SERVICE_NAME
       - '--image'
-      - '$_AR_HOSTNAME/$_AR_PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA'
+      - '$_AR_HOSTNAME/$_AR_PROJECT_ID/$_SERVICE_NAME/$_SERVICE_NAME:$COMMIT_SHA'
       - '--region'
       - $_DEPLOY_REGION
       - '--platform'
