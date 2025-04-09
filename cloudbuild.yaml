@@ -4,6 +4,8 @@ steps:
       - build
       - '-t'
       - '$_AR_HOSTNAME/$_AR_PROJECT_ID/$_SERVICE_NAME/$_SERVICE_NAME:$COMMIT_SHA'
+      - '-t'
+      - '$_AR_HOSTNAME/$_AR_PROJECT_ID/$_SERVICE_NAME/$_SERVICE_NAME:latest'
       - .
   - name: gcr.io/cloud-builders/docker
     args:
