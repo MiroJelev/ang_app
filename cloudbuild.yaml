@@ -8,7 +8,7 @@ steps:
   - name: gcr.io/cloud-builders/docker
     args:
       - push
-      - '$_AR_HOSTNAME/$_AR_PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA'
+      - '$_AR_HOSTNAME/$_AR_PROJECT_ID/$_SERVICE_NAME/$_SERVICE_NAME:$COMMIT_SHA'
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
     args:
       - run
