@@ -6,11 +6,12 @@ import { SiteInfoComponent } from "./feature/site-info/site-info.component";
 import { ToolbarComponent } from "./feature/toolbar/toolbar.component";
 import { DisplayContentComponent } from "./feature/display-content/display-content.component";
 import { SearchComponent } from "./feature/search/search.component";
+import {MatDividerModule} from '@angular/material/divider';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SiteInfoComponent, ToolbarComponent, DisplayContentComponent, SearchComponent],
+  imports: [RouterOutlet, SiteInfoComponent, ToolbarComponent, DisplayContentComponent, SearchComponent, MatDividerModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
