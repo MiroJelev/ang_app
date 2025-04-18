@@ -1,0 +1,15 @@
+#main-content{
+    max-width: fit-content;
+    display: flex;
+    margin: auto;
+}
+
+#search{
+    align-content: end;
+}
+
+.example-spacer {
+    max-width: 500px;
+    min-width: 200px;
+    flex: 1 1 auto;
+}

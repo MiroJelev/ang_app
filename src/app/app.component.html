@@ -1,7 +1,13 @@
-<app-toolbar></app-toolbar>
+<header>
+    <app-toolbar></app-toolbar>
+</header>
 <main class="main">
-    <app-display-content></app-display-content>
-    <app-search></app-search>
+    <p style="font-weight: bold; font-style: italic; font-size: xx-large;"> Did you know that? </p>
+    <div id="main-content">
+        <app-display-content></app-display-content>
+        <span class="example-spacer"></span>
+        <app-search id="search"></app-search>
+    </div>
     <mat-divider></mat-divider>
     <app-site-info></app-site-info>
 </main>
