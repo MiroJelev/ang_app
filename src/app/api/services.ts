@@ -4,3 +4,5 @@
 
 export { ApiService } from './services/api.service';
 export { CountryService } from './services/country.service';
+export { CountryCitiesService } from './services/country-cities.service';
+export { PolicyService } from './services/policy.service';

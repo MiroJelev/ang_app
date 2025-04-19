@@ -8,6 +8,8 @@ import { ApiConfiguration, ApiConfigurationParams } from './api-configuration';
 
 import { ApiService } from './services/api.service';
 import { CountryService } from './services/country.service';
+import { CountryCitiesService } from './services/country-cities.service';
+import { PolicyService } from './services/policy.service';
 
 /**
  * Module that provides all services and configuration.
@@ -19,6 +21,8 @@ import { CountryService } from './services/country.service';
   providers: [
     ApiService,
     CountryService,
+    CountryCitiesService,
+    PolicyService,
     ApiConfiguration
   ],
 })
