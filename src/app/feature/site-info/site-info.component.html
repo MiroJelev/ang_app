@@ -1,35 +1,45 @@
 <div id="card-box">
-    <mat-card>
-        <img mat-card-image src="assets/database.png" alt="Photo of database and cloud technologies used">
-        <mat-card-content>
-        <p>
-            Database
-        </p>
-        </mat-card-content>
-        <mat-card-actions>
-        <button mat-button>-></button>
-        </mat-card-actions>
+  @for(card of cards; track card){
+  <div
+    (mouseenter)="card.currentMouseState = 'faceDown'"
+    (mouseleave)="card.currentMouseState = 'faceUp'"
+  >
+    <mat-card
+      class="site_info_cards"
+      [@flip_card_right]="card.currentMouseState"
+      (@flip_card_right.start)="card.currentAnimationState = 'turning'"
+      (@flip_card_right.done)="card.currentAnimationState = $event['toState']"
+    >
+      <ng-container
+        id="card_front"
+        *ngIf="card.currentAnimationState === 'turning'"
+      ></ng-container>
+      <ng-container
+        id="card_front"
+        *ngIf="card.currentAnimationState === 'faceUp'"
+      >
+        <img
+          mat-card-image
+          src="{{ card.frontImage }}"
+          alt="Photo technologies used for creating the site"
+        />
+        <mat-card-title>
+          <p>{{ card.frontText }}</p>
+        </mat-card-title>
+      </ng-container>
+      <ng-container *ngIf="card.currentAnimationState === 'faceDown'">
+        <div id="card_back">
+          <mat-card-content>
+            {{ card.backText }}
+            <mat-card-actions>
+              <a mat-stroked-button  href={{card.backButtonURL}}>
+                {{ card.backButtonText }}
+              </a>
+            </mat-card-actions>
+          </mat-card-content>
+        </div>
+      </ng-container>
     </mat-card>
-    <mat-card>
-        <img mat-card-image src="assets/backend.png" alt="Photo of backend technologies used">
-        <mat-card-content>
-        <p>
-            Backend
-        </p>
-        </mat-card-content>
-        <mat-card-actions>
-        <button mat-button>-></button>
-        </mat-card-actions>
-    </mat-card>
-    <mat-card>
-        <img mat-card-image src="assets/angular_no_background.png" alt="Photo of frontend framework used">
-        <mat-card-content>
-        <p>
-            Frontend
-        </p>
-        </mat-card-content>
-        <mat-card-actions>
-        <button mat-button>-></button>
-        </mat-card-actions>
-    </mat-card>
+  </div>
+  }
 </div>
