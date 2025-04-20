@@ -1,38 +1,40 @@
 <div id="outer_phone">
-    <div id="inner_phone">
-        <table id="table" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-            <!--- Note that these columns can be defined in any order.
+  <div id="inner_phone">
+    <table
+      id="table"
+      mat-table
+      [dataSource]="dataSource"
+      class="mat-elevation-z8"
+    >
+      <!--- Note that these columns can be defined in any order.
                   The actual rendered columns are set as a property on the row definition" -->
-          
-            <!-- Capital Column -->
-            <ng-container matColumnDef="capital">
-              <th mat-header-cell *matHeaderCellDef> Capital </th>
-              <td mat-cell *matCellDef="let element"> {{element.capital}} </td>
-            </ng-container>
-          
-            <!-- Code Column -->
-            <ng-container matColumnDef="code">
-              <th mat-header-cell *matHeaderCellDef> Code </th>
-              <td mat-cell *matCellDef="let element"> {{element.code}} </td>
-            </ng-container>
-          
-            <!-- Name Column -->
-            <ng-container matColumnDef="name">
-              <th mat-header-cell *matHeaderCellDef> Name </th>
-              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-            </ng-container>
 
-            <!-- area Column -->
-            <ng-container matColumnDef="area">
-              <th mat-header-cell *matHeaderCellDef> Area </th>
-              <td mat-cell *matCellDef="let element"> {{element.area}} </td>
-            </ng-container>
-          
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          </table>
-          
-          
-    </div>
+      <!-- Capital Column -->
+      <ng-container matColumnDef="capital">
+        <th mat-header-cell *matHeaderCellDef>Capital</th>
+        <td mat-cell *matCellDef="let element">{{ element.capital }}</td>
+      </ng-container>
+
+      <!-- Code Column -->
+      <ng-container matColumnDef="code">
+        <th mat-header-cell *matHeaderCellDef>Code</th>
+        <td mat-cell *matCellDef="let element">{{ element.code }}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
+
+      <!-- area Column -->
+      <ng-container matColumnDef="area">
+        <th mat-header-cell *matHeaderCellDef>Area</th>
+        <td mat-cell *matCellDef="let element">{{ element.area }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
 </div>
