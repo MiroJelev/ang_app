@@ -5,10 +5,12 @@
 }
 
 #search{
-    align-content: end;
+    align-content: center;
+    min-width: 300px;
+    max-width: 500px;
 }
 
-.example-spacer {
+.spacer {
     max-width: 500px;
     min-width: 200px;
     flex: 1 1 auto;
