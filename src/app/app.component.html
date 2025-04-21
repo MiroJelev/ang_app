@@ -2,13 +2,16 @@
   <app-toolbar></app-toolbar>
 </header>
 <main class="main">
-  <p style="font-weight: bold; font-style: italic; font-size: xx-large">
-    Did you know that?
-  </p>
   <div id="main-content">
-    <app-display-content [countries]="countries"></app-display-content>
     <span class="spacer"></span>
-    <app-search id="search"></app-search>
+    <div id="search_section">
+      <p style="font-weight: bold; font-style: italic; font-size: xx-large">
+        Did you know that the name of the country that the Vatican City can be
+        found is Holy See?
+      </p>
+      <app-search></app-search>
+    </div>
+    <app-display-content [countries]="countries"></app-display-content>
   </div>
   <mat-divider></mat-divider>
   <app-site-info></app-site-info>

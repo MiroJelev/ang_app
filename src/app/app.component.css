@@ -1,17 +1,21 @@
 #main-content{
     max-width: fit-content;
-    display: flex;
+    /* display: flex; */
     margin: auto;
 }
 
-#search{
-    align-content: center;
+#search_section{
     min-width: 300px;
     max-width: 500px;
+    margin: auto;
+}
+
+#search_section p{
+    line-height: 2;
 }
 
 .spacer {
     max-width: 500px;
-    min-width: 200px;
-    flex: 1 1 auto;
+    min-width: 100px;
+    /* flex: 1 1 auto; */
 }
