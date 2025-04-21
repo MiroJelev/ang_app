@@ -3,18 +3,23 @@
     padding: 20px;
 }
 
-mat-card {
-    max-width: 270px;
+#card-box div{
     margin: auto;
 }
 
-mat-card  img{
-    width: 265px;
-    height: 270px;
+.site_info_cards {
+    width: 270px;
+    height: 360px;
+    margin: auto;
+    text-align: center;
+    border-bottom-right-radius: 40px;
 }
-  
-.example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
+
+#card_back mat-card-content{
+    font-size: x-large;
 }
-  
+
+#card_back mat-card-content mat-card-actions{
+    margin: 0 auto;
+    display: block;
+}
