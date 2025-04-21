@@ -1,7 +1,11 @@
 #inner_phone{
     height: 600px;
-    width: 400px;
+    width: 450px;
     overflow: auto;
+    border: solid;
+    border-radius: 20px;
+    border-style: dashed;
+    border-width: 2px;
 }
 
 tr.expandableRow{
