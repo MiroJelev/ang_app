@@ -3,3 +3,7 @@
     width: 400px;
     overflow: auto;
 }
+
+tr.expandableRow{
+    height: 0;
+}

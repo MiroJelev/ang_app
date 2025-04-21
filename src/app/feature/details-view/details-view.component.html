@@ -1,1 +1,44 @@
-<p>details-view works!</p>
+<mat-tab-group>
+  <mat-tab label="Third"> 
+    <mat-list>
+        <mat-list-item>
+          <span matListItemTitle>Country</span>
+          <span>{{ country?.area }}</span>
+        </mat-list-item>
+        <mat-list-item>
+          <span matListItemTitle>Population</span>
+          <span>{{ country?.population }}</span>
+        </mat-list-item>
+        <mat-list-item>
+          <span matListItemTitle>Capital province</span>
+          {{ country?.province }}
+        </mat-list-item>
+      </mat-list>
+  </mat-tab>
+  <mat-tab label="continent">
+    <mat-list>
+      <mat-list-item>
+        <span matListItemTitle>{{ country?.continents?.continent }}</span>
+        <span matListItemLine
+          >Percentage: {{ country?.continents?.percentage }}</span
+        >
+      </mat-list-item>
+    </mat-list>
+  </mat-tab>
+  <mat-tab label="politics">
+    <mat-list>
+      <mat-list-item lines="3">
+        <span matListItemTitle>Government</span>
+        <span>{{ country?.politics?.government }}</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>Independence</span>
+        <span>{{ country?.politics?.independence }}</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>Dependent</span>
+        <span>{{ country?.politics?.dependent }}</span>
+      </mat-list-item>
+    </mat-list>
+  </mat-tab>
+</mat-tab-group>
