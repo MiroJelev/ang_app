@@ -79,6 +79,11 @@
         *matRowDef="let row; columns: ['expandedDetail']"
         class="expandableRow"
       ></tr>
+      <tr class="mat-row" *matNoDataRow>
+        <td class="empty_row" [attr.colspan]="displayedColumns.length">
+          <h2>No data matching the filter.</h2>
+        </td>
+      </tr>
     </table>
   </div>
 </div>
