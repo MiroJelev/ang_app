@@ -5,11 +5,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { DetailsViewComponent } from "../details-view/details-view.component";
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-display-content',
   standalone: true,
-  imports: [MatTableModule, MatIconModule, CommonModule, DetailsViewComponent],
+  imports: [MatTableModule, MatIconModule, CommonModule, DetailsViewComponent, MatButtonModule],
   templateUrl: './display-content.component.html',
   styleUrl: './display-content.component.css',
   animations: [
