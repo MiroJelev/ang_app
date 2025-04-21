@@ -62,7 +62,7 @@
         >
           <div [@detailExpand]="isExpanded(element) ? 'expanded' : 'collapsed'">
             <ng-container *ngIf="isExpanded(element)">
-              <app-details-view></app-details-view>
+              <app-details-view [country]="element"></app-details-view>
             </ng-container>
           </div>
         </td>

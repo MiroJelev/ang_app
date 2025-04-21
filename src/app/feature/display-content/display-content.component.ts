@@ -18,7 +18,7 @@ import { DetailsViewComponent } from "../details-view/details-view.component";
       state('expanded', style({ height: '*', padding: '1rem'})),
       transition(
         'expanded <=> collapsed',
-        animate('225 cubic-bezier(0.4, 0.0, 0.2, 1)')
+        animate('.5s cubic-bezier(0.4, 0.0, 0.2, 1)')
       )
     ])
   ]
@@ -43,7 +43,6 @@ export class DisplayContentComponent {
     const index = this.expandedRows.findIndex((x) => x.code === row.code);
     if(index === -1){
       this.expandedRows.push(row);
-      ///
     } else{
       this.expandedRows.splice(index, 1);
     }
