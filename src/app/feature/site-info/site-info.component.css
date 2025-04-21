@@ -1,4 +1,6 @@
 #card-box{
+    max-width: 900px;
+    margin: auto;
     display: flex;
     padding: 20px;
 }
