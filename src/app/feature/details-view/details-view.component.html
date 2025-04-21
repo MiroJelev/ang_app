@@ -41,4 +41,28 @@
       </mat-list-item>
     </mat-list>
   </mat-tab>
+  <mat-tab label="Economy">
+    <mat-list>
+      <mat-list-item>
+        <span matListItemTitle>GDP</span>
+        <span>{{ country?.economy?.gdp }}</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>Agriculture</span>
+        <span>{{ country?.economy?.agriculture }}</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>Service</span>
+        <span>{{ country?.economy?.service }}</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>Industry</span>
+        <span>{{ country?.economy?.industry }}</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>Inflation</span>
+        <span>{{ country?.economy?.inflation }}</span>
+      </mat-list-item>
+    </mat-list>
+  </mat-tab>
 </mat-tab-group>
