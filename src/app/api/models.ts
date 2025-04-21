@@ -4,4 +4,5 @@
 
 export type { Continents } from './models/continents';
 export type { Country } from './models/country';
+export type { Economy } from './models/economy';
 export type { Politics } from './models/politics';

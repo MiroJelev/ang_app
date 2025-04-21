@@ -42,12 +42,16 @@
           *matCellDef="let element"
           (click)="toggleRow(element); $event.stopPropagation()"
         >
-          <button mat-icon-button color="primary">
+          <button mat-raised-button >
             <ng-container *ngIf="!isExpanded(element)">
-              <mat-icon>home</mat-icon>
+              <mat-icon class="material-icons-round">
+                keyboard_arrow_down
+              </mat-icon>
             </ng-container>
             <ng-container *ngIf="isExpanded(element)">
-              <mat-icon *ngIf="isExpanded(element)">menu</mat-icon>
+              <mat-icon class="material-icons-round">
+                keyboard_arrow_up
+              </mat-icon>
             </ng-container>
           </button>
         </td>
@@ -75,6 +79,11 @@
         *matRowDef="let row; columns: ['expandedDetail']"
         class="expandableRow"
       ></tr>
+      <tr class="mat-row" *matNoDataRow>
+        <td class="empty_row" [attr.colspan]="displayedColumns.length">
+          <h2>No data matching the filter.</h2>
+        </td>
+      </tr>
     </table>
   </div>
 </div>

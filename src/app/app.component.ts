@@ -19,6 +19,17 @@ export class AppComponent {
   title = 'miro-app';
 
   countries: Array<Country> = [];
+  filteredCountries: Array<Country> = [];
+
+  filterVal: String = "";
+
+  filterTable(event: any){
+    if(event === ""){
+      this.filteredCountries = this.countries;
+    }
+    this.filteredCountries = this.countries.filter((x) => x.name.toLowerCase().includes(event.toLowerCase()));
+    
+  }
 
   constructor(
     private _countriesService: CountryService
@@ -27,8 +38,8 @@ export class AppComponent {
   ngOnInit(){
     this._countriesService.countryRetrieve()
     .subscribe((val: any)=>{
-      console.log(val);
       this.countries = val;
+      this.filteredCountries = val;
     })
   }
 }

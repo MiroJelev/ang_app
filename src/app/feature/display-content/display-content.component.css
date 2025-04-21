@@ -11,3 +11,7 @@
 tr.expandableRow{
     height: 0;
 }
+
+.empty_row{
+    text-align: center;
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output, SimpleChange } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {FormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
@@ -14,4 +14,10 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class SearchComponent {
   value = "";
+
+  @Output() filterValueEvent = new EventEmitter<string>();
+
+  triggerInputEvent(event: any){
+    this.filterValueEvent.emit(this.value);
+  }
 }
