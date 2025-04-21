@@ -13,5 +13,5 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './search.component.css'
 })
 export class SearchComponent {
-  value = 'Clear me';
+  value = "";
 }
