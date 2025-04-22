@@ -15,6 +15,9 @@
     margin: auto;
     text-align: center;
     border-bottom-right-radius: 40px;
+
+    border: 1px;
+    border: solid;
 }
 
 #card_back mat-card-content{
