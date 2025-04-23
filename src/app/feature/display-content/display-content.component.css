@@ -2,10 +2,7 @@
     height: 900px;
     width: 900px;
     overflow: auto;
-    border: solid;
-    border-radius: 20px;
-    border-style: dashed;
-    border-width: 2px;
+    padding: 10px;
 }
 
 tr.expandableRow{
